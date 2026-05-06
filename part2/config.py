@@ -1,0 +1,1 @@
+path=r"D:\文件\测绘程序设计\bookcode-master\Part1-ch02\运行程序与数据\测站坐标.txt"
