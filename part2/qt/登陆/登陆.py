@@ -8,7 +8,7 @@ class Mywindow(QMainWindow):
         # button.setToolTip('有惊喜')
         # button.setText('我被重新设置')
         la=QLabel('label',self)
-        la.
+
 
 
 if __name__=='__main__':
