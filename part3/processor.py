@@ -37,9 +37,9 @@ import math
 def point_line_distance(o, i, n):
     """计算点 i 到线段 o-n 的垂直距离（海伦公式）"""
     # o, i, n 均为 [name, x, y] 格式
-    xo, yo = o[1], o[2]
-    xi, yi = i[1], i[2]
-    xn, yn = n[1], n[2]
+    xo, yo = float(o[1]), float(o[2])
+    xi, yi = float(i[1]), float(i[2])
+    xn, yn = float(n[1]), float(n[2])
 
     lon = math.hypot(xn - xo, yn - yo)
     if lon == 0:
@@ -71,11 +71,11 @@ def douglas_peucker(points, epsilon):
 
     # 栈中存储待处理的区间 (start_idx, end_idx)
     stack = [(0, n - 1)]
-    print(stack)
+    # print(stack)
 
     while stack:
         start, end = stack.pop()
-        print(start,end)
+        # print(start,end)
         if start + 1 >= end:   # 区间内无中间点
             continue
 
