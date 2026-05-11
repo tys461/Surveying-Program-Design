@@ -13,6 +13,7 @@ class FileDataModel(QAbstractTableModel):
         self._headers=['序号','x坐标','y坐标']
         self._load_file(filename)
 
+
     def _load_file(self,filename):
         try:
             with open(filename, 'r', encoding='utf-8') as f:
@@ -59,11 +60,13 @@ class MyWindow(QMainWindow,Ui_MainWindow):
         super().__init__()
         self.ui=self.setupUi(self)
         self.data=[]
+
         self.action_add()
         self.combo = QComboBox()
         items = {"50m": 50, "80m": 80, "100m": 100}
         for text, value in items.items():
             self.combo.addItem(text, value)
+        self.toolBar.insertWidget(self.actionData, self.combo)
 
 
 
@@ -78,6 +81,8 @@ class MyWindow(QMainWindow,Ui_MainWindow):
         self.actionData.triggered.connect(lambda: self.stackedWidget.setCurrentIndex(3))
         self.actionchart.triggered.connect(self.data_chart)
         self.actionchart.triggered.connect(lambda: self.stackedWidget.setCurrentIndex(4))
+
+
 
 
 
@@ -128,8 +133,10 @@ class MyWindow(QMainWindow,Ui_MainWindow):
     def data_show(self):
         try:
             self.tableView_data.setModel(self.model)
+            self.statusBar.showMessage(self._opne_file[0],0)
         except:
             QMessageBox.warning(self, '错误', '你没有打开原始文件')
+            self.statusBar.clearMessage()
 
 
     def data_chart(self):
