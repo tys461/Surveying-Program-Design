@@ -29,7 +29,7 @@ class MainWindow(QMainWindow):
         axis_x=QValueAxis()
         axis_y=QValueAxis()
         chart.addAxis(axis_x,Qt.AlignmentFlag.AlignBottom)
-        chart.addAxis(axis_y,Qt.AlignmentFlag.AlignBottom)
+        chart.addAxis(axis_y,Qt.AlignmentFlag.AlignLeft)
         #将序列附加到坐标轴上
         series.attachAxis(axis_x)
         series.attachAxis(axis_y)
