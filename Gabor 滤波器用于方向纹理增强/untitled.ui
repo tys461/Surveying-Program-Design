@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>735</width>
+    <height>551</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabPosition">
+       <enum>QTabWidget::South</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>矩阵数据</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_data"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>计算结果</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_report"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>735</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_open"/>
+    <addaction name="action_save"/>
+    <addaction name="action"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>计算</string>
+    </property>
+    <addaction name="action_Gabor"/>
+    <addaction name="action_NMS"/>
+    <addaction name="action_Direction"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>说明</string>
+    </property>
+    <addaction name="action_help"/>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_open"/>
+   <addaction name="action_save"/>
+   <addaction name="action_count"/>
+   <addaction name="separator"/>
+   <addaction name="action"/>
+  </widget>
+  <action name="action_open">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 004.png</normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 004.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/shell32 259.png</normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/shell32 259.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 094.png</normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 094.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+  <action name="action_Gabor">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 112.png</normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 112.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算Gabor 滤波器响应</string>
+   </property>
+  </action>
+  <action name="action_NMS">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 282.png</normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 282.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算非极大值抑制（NMS）</string>
+   </property>
+  </action>
+  <action name="action_Direction">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/shell32 264.png</normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/shell32 264.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算方向响应统计</string>
+   </property>
+  </action>
+  <action name="action_count">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/shell32 298.png</normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/shell32 298.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算</string>
+   </property>
+  </action>
+  <action name="action_help">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 100.png</normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 100.png</iconset>
+   </property>
+   <property name="text">
+    <string>帮助</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 228.png</normaloff>C:/Users/tys/Desktop/测绘程序设计校赛 C012/图标/11icon/imageres 228.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

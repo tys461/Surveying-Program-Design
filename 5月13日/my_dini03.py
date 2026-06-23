@@ -26,10 +26,6 @@ class Dini33Parser:
                 idx += 1
         return self.line_info
 
-
-
-
-
     def _parse_part(self,start_idx):
         """从 start_idx 开始解析一个完整的测段，返回 (PartInfo, 结束索引)"""
         part=PartInfo()

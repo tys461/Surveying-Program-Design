@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>构建不规则三角网(TIN) 进行休积计算</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/测绘工程.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/测绘工程.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabPosition">
+       <enum>QTabWidget::South</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="data">
+       <attribute name="title">
+        <string>点云数据</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tri">
+       <attribute name="title">
+        <string>三角网示意图</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3"/>
+      </widget>
+      <widget class="QWidget" name="report">
+       <attribute name="title">
+        <string>计算报告</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_open"/>
+    <addaction name="action_save"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>计算</string>
+    </property>
+    <addaction name="action_count"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>查看</string>
+    </property>
+    <addaction name="action_data"/>
+    <addaction name="action_report"/>
+    <addaction name="action_tri"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_help"/>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_open"/>
+   <addaction name="action_save"/>
+   <addaction name="separator"/>
+   <addaction name="action_count"/>
+   <addaction name="separator"/>
+   <addaction name="action_big"/>
+   <addaction name="action_samll"/>
+   <addaction name="separator"/>
+   <addaction name="action_close"/>
+  </widget>
+  <action name="action_open">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/imageres 004.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/imageres 004.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/shell32 259.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/shell32 259.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="action_count">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/49计算器、利率-线性.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/49计算器、利率-线性.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算</string>
+   </property>
+  </action>
+  <action name="action_data">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/shell32 319.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/shell32 319.png</iconset>
+   </property>
+   <property name="text">
+    <string>点云数据</string>
+   </property>
+  </action>
+  <action name="action_report">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/shell32 326.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/shell32 326.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算报告</string>
+   </property>
+  </action>
+  <action name="action_tri">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/imageres 252.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/imageres 252.png</iconset>
+   </property>
+   <property name="text">
+    <string>三角网示意图</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/关于.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/关于.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="action_help">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/帮助.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/帮助.png</iconset>
+   </property>
+   <property name="text">
+    <string>帮助</string>
+   </property>
+  </action>
+  <action name="action_big">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/放大缩小_X.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/放大缩小_X.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="action_samll">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/放大缩小_Y.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/放大缩小_Y.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="action_close">
+   <property name="icon">
+    <iconset>
+     <normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/imageres 094.png</normaloff>../qt5月6日/venv/Lib/site-packages/qt6_applications/Qt/bin/ico/imageres 094.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <brand Name="Leica">
+  	<series  Name="TCA2003">
+        <a0>281.77</a0>
+        <b0>0.29065</b0>
+        <c0>4.12535</c0>
+        </series>
+  	<series  Name="TM50">
+        <a0>286.34</a0>
+        <b0>0.29525</b0>
+        <c0>4.126</c0>       
+        </series>
+  	<series Name="TPS1100">
+        <a0>281.04</a0>
+        <b0>0.29195</b0>
+        <c0>4.126</c0>      
+        </series>
+  	<series Name="TPS1200">
+        <a0>281.05</a0>
+        <b0>0.29196</b0>
+        <c0>4.126</c0>     
+        </series>
+  </brand>
+  <brand Name="South">
+  	<series Name="NTS320">
+        <a0>281.763</a0>
+        <b0>0.29065</b0>
+        <c0>4.12535</c0>     
+         </series>
+  </brand>
+  <brand Name="TOPCON">
+  	<series Name="MS05AX">
+        <a0>282.324</a0>
+        <b0>0.294362</b0>
+        <c0>4.127</c0>     
+         </series>
+               <series Name="GM101">
+        <a0>282.324</a0>
+        <b0>0.294280</b0>
+        <c0>4.1260</c0>     
+         </series>
+  </brand>
+  <prismstyle>
+  	<series Name="零常数棱镜">
+        <const>0.000</const> 
+        </series>
+        <series Name="LEICA圆棱镜">
+        <const>-34.4</const> 
+        </series>
+       <series Name="LEICA小棱镜">
+        <const>-17.5</const> 
+        </series>
+       <series Name="L棱镜">
+        <const>-25.4</const> 
+        </series>
+       <series Name="棱镜1">
+        <const>-30</const> 
+        </series>
+       <series Name="棱镜2">
+        <const>-22.5</const> 
+       </series>
+       <series Name="棱镜3">
+        <const>0.000</const> 
+       </series>
+  </prismstyle>
+</config>

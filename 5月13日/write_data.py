@@ -45,9 +45,6 @@ def write():
 
 
 
-
-
-
             for station in line.StationList:
                 ws[f'I{BH}']=f'{station.BPtH:.5f}'
                 ws[f'I{FH}']=f'{station.FPtH:.5f}'

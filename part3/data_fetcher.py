@@ -4,7 +4,6 @@ class readOpen():
     def __init__(self,path):
         self.path=path
         self.data=[]
-
     def open(self):
         if not os.path.exists(self.path):
             print("文件不存在 ")

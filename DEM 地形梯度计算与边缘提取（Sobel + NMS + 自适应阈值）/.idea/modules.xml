@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DEM 地形梯度计算与边缘提取（Sobel + NMS + 自适应阈值）.iml" filepath="$PROJECT_DIR$/.idea/DEM 地形梯度计算与边缘提取（Sobel + NMS + 自适应阈值）.iml" />
+    </modules>
+  </component>
+</project>

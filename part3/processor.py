@@ -1,39 +1,5 @@
 import math
 
-# def point_line_distance(o,i,n):
-#     l_on=math.sqrt((o[1]-n[1])*(o[1]-n[1])+(o[2]-n[2])*(o[2]-n[2]))
-#     l_oi=math.sqrt((o[1]-i[1])*(o[1]-i[1])+(o[2]-i[2])*(o[2]-i[2]))
-#     l_in=math.sqrt((i[1]-n[1])*(i[1]-n[1])+(i[2]-n[2])*(i[2]-n[2]))
-#     p=(l_on+l_oi+l_in)/2
-#     # print(p,p*(p-l_on)*(p-l_oi)*(p-l_in))
-#     s=math.sqrt(p*(p-l_on)*(p-l_oi)*(p-l_in))
-#     d=2*(s/l_on)
-#     return d
-#
-#
-#
-# def dadt_processor(points,epsilon):
-#     start=points[0]
-#     end=points[-1]
-#
-#     d_max=0
-#     idx=0
-#     print(len(points))
-#     for i in range(1,len(points)):
-#         d=point_line_distance(start,points[i],end)
-#         if d>d_max:
-#             d_max=d
-#             idx=points[i][0]
-#     if d_max<epsilon:
-#         print(d_max)
-#         return [start,end]
-#     else:
-#         left=dadt_processor(points[:idx+1],epsilon)
-#         right=dadt_processor(points[idx:],epsilon)
-#         return left[:-1]+right
-
-import math
-
 def point_line_distance(o, i, n):
     """计算点 i 到线段 o-n 的垂直距离（海伦公式）"""
     # o, i, n 均为 [name, x, y] 格式
