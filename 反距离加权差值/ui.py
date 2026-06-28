@@ -59,7 +59,7 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
 
     def write_table(self):
         heards=['点名','x(m)','y(m)','z(m)']
-        row=len(self.lis_point)
+        row=len(self.lis_point)+1
         colum=len(heards)
 
         self.tableWidget.setRowCount(row)
