@@ -173,7 +173,7 @@ class GProjectionInverse(kelasuofu,IUGG1975,CGCS2000,Ell_count):
            self.bata = self.beta * math.sin(2 * B0) + self.gamma * math.sin(4 * B0) + self.delta * math.sin(
                6 * B0) + self.epsilon * math.sin(8 * B0) + self.zeta * math.sin(10 * B0)
            self.Bf = (X - self.bata) / self.alpha
-        # print(self.Bf)
+        print(self.Bf,'-----------------')
 
 
     def dushu(self,input_d):
